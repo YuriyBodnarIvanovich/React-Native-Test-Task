@@ -4,11 +4,21 @@ import {Image, View,StyleSheet} from "react-native";
 const MenuBottom = () =>{
     return(
         <View style={styles.container}>
-            <Image source={require('../../photo/Feed.png')} style={styles.item}/>
-            <Image source={require('../../photo/Customers.png')} style={styles.item}/>
-            <Image source={require('../../photo/Mark.png')} style={styles.item}/>
-            <Image source={require('../../photo/Chat.png')} style={styles.item}/>
-            <Image source={require('../../photo/Union.png')} style={styles.item}/>
+                <View style={styles.item}>
+                    <Image source={require('../../photo/Feed.png')}/>
+                </View>
+                <View style={styles.item}>
+                    <Image source={require('../../photo/Customers.png')}/>
+                </View>
+                <View style={styles.item}>
+                    <Image source={require('../../photo/Mark.png')}/>
+                </View>
+                <View style={styles.item}>
+                    <Image source={require('../../photo/Chat.png')} />
+                </View>
+                <View style={styles.item}>
+                    <Image source={require('../../photo/Union.png')}/>
+                </View>
         </View>
     )
 }
@@ -17,11 +27,12 @@ const styles = StyleSheet.create({
     container:{
         height:48,
         paddingTop:10,
-        paddingLeft:17,
-        flexDirection:'row'
+        paddingLeft: 30,
+        flexDirection:'row',
+        justifyContent:'center'
     },
     item:{
-        marginRight: 60
+        flex:1
     },
 });
 export default MenuBottom;
